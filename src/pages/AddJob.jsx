@@ -37,6 +37,7 @@ const AddJob = () => {
       description,
       bid_count: 0,
     }
+     console.log(formData)
     try {
       // 2222222222 client side theke server ea data ta pathabo  with make a post request
       await axios.post(`${import.meta.env.VITE_API_URL}/add-job`, formData)
@@ -48,6 +49,7 @@ const AddJob = () => {
       toast.error(err.message)
     }
   }
+ 
   return (
     <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12'>
       <section className=' p-2 md:p-6 mx-auto bg-white rounded-md shadow-md '>
